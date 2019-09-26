@@ -1,0 +1,59 @@
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	display: flex;
+	/* default display value is 'block' so you don't have to write anything here! */
+}
+
+.row {
+	height: 100%;
+	width: calc(100%/3);
+	display: flex;
+}
+
+.black {
+	background-color: #000000;
+}
+
+.gold {
+	background-color: #D4AF37;
+}
+
+.center-child {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.img {{content: url("images/iterate.png.png");}}
+
+.restrict-img {
+	max-height: 80%;
+	max-width: 80%;
+}
+
+/* make everything disappear */
+@media only screen and (max-width: 1000px) {
+	body {
+	display: block;
+	}
+	.row {
+	width: 100%;
+	height: calc(100%/3);
+	}
+}
+
+/* make everything reappear */
+@media only screen and (max-width: 700px) {
+img {
+	display: none;
+}
+}
+
+/* make just the image disappear */
+@media only screen and (max-width: 400px) {
+.row {
+	display: none;
+}
+}
